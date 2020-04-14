@@ -1,4 +1,5 @@
 require 'bundler/setup'
+require 'dotenv/load'
 Bundler.require
 
 ActiveRecord::Base.establish_connection(

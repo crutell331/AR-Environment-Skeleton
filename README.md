@@ -1,18 +1,18 @@
 # AR-Environment-Skeleton
 
-Students have many classes. Classes have many students.
-Join table would be Student_Classes
+Students have many homerooms. homerooms have many students.
+Join table would be Student_homerooms
 Student would have:
-has_many :student_classes
-has_many :classes, through: :Student_Classes
-Classes would have:
-has_many :student_classes
-has_many: students, through: Student_Classes
-Student_Classes would have:
+has_many :student_homerooms
+has_many :homerooms, through: :Student_homerooms
+homerooms would have:
+has_many :student_homerooms
+has_many: students, through: Student_homerooms
+Student_homerooms would have:
 belongs_to :students
-belongs_to :classes
+belongs_to :homerooms
 
-self.find_all_student_in_grade(student, grade)
+self.find_all_student_in_homeroom_section(section)
 
 Find all students named 'student' in grade 'grade'
 

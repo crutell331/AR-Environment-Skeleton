@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_23_232623) do
+ActiveRecord::Schema.define(version: 2020_07_24_155007) do
+
+  create_table "homerooms", force: :cascade do |t|
+    t.integer "section"
+  end
+
+  create_table "student_homerooms", force: :cascade do |t|
+    t.integer "student_id"
+    t.integer "homeroom_id"
+  end
 
   create_table "student_teachers", force: :cascade do |t|
     t.integer "student_id"

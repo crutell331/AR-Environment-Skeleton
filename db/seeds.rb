@@ -1,7 +1,8 @@
-# Student.delete_all
-# Teacher.delete_all
-# StudentTeacher.delete_all
-
+Student.delete_all
+Teacher.delete_all
+StudentTeacher.delete_all
+Homeroom.delete_all
+StudentHomeroom.delete_all
 
 student1 = Student.create(first_name: "A", last_name: "B", grade_level: "first")
 student2 = Student.create(first_name: "C", last_name: "D", grade_level: "second")
@@ -21,3 +22,16 @@ studentteacher3 = StudentTeacher.create(student_id: student3.id, teacher_id: tea
 studentteacher4 = StudentTeacher.create(student_id: student4.id, teacher_id: teacher1.id)
 studentteacher5 = StudentTeacher.create(student_id: student5.id, teacher_id: teacher1.id)
 studentteacher6 = StudentTeacher.create(student_id: student6.id, teacher_id: teacher1.id)
+
+homeroom_1 = Homeroom.create(section: 1)
+homeroom_2 = Homeroom.create(section: 2)
+homeroom_3 = Homeroom.create(section: 3)
+homeroom_4 = Homeroom.create(section: 4)
+homeroom_5 = Homeroom.create(section: 5)
+
+student_homeroom_2 = StudentHomeroom.create(student: student2, homeroom: homeroom_1)
+student_homeroom_3 = StudentHomeroom.create(student: student3, homeroom: homeroom_2)
+student_homeroom_1 = StudentHomeroom.create(student: student1, homeroom: homeroom_3)
+student_homeroom_4 = StudentHomeroom.create(student: student4, homeroom: homeroom_4)
+student_homeroom_5 = StudentHomeroom.create(student: student5, homeroom: homeroom_5)
+student_homeroom_6 = StudentHomeroom.create(student: student6, homeroom: homeroom_1)

@@ -11,8 +11,8 @@ You can use this repo to build new Activerecord projects
 - Student#full_name should return the first and last name of the student in one string, for ex: “Ian Grubb”
 - Student#grade_level should return the student’s grade level
 - Student.all should return a list of all students -->
-
-- Student.all_in_grade should receive an argument of a grade, ex: “first”, and return all students who are in that grade
+<!-- 
+- Student.all_in_grade should receive an argument of a grade, ex: “first”, and return all students who are in that grade -->
 
 <!-- - A Teacher has a last_name (string)
 - A Teacher has a grade_level (string)
@@ -50,6 +50,14 @@ Answer the following questions:
 
 - What changes did you make to your app? Why?
 
+
+###
 I created a grade_levels table and a GradeLevel class
 
-and now I'm stuck and don't remember how to do anything
+I had to rebuild Student#all_in_grade
+- feel like there is an easier way
+
+
+I'm removing grade_level from each Teacher and Student because it's ruining everything
+
+
